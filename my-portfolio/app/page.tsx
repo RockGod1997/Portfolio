@@ -1,6 +1,5 @@
 "use client"; // This ensures that this component runs on the client-side
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from "./components/footer";
 import Header from "./components/header";
