@@ -8,7 +8,7 @@ export interface Props {
   children?: React.ReactNode;
 }
 
-export function SocialLink({ className, href, children, icon: Icon }: Props) {
+export function SocialLink({ className:assr, href, children, icon: Icon }: Props) {
   return (
     <div>
       <Link

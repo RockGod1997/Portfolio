@@ -37,12 +37,12 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
       {/* Dark Mode Toggle */}
-     {/*  <button
+      <button
         onClick={toggleDarkMode}
         className="absolute top-4 right-4 p-2 border rounded bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
       >
         {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-      </button> */}
+      </button>
 
       {/* Header */}
    <Header/>
@@ -53,7 +53,7 @@ export default function Home() {
         <section className="text-center sm:text-left">
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <p className="text-gray-700 dark:text-gray-300">
-            Hello! I'm a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
+            Hello! I&apos;m a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
           </p>
         </section>
 

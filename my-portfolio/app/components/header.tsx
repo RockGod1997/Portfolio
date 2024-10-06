@@ -1,6 +1,6 @@
-import { SocialLink } from "./social-link";
+/* import { SocialLink } from "./social-link";
 import { SOCIALS } from "./socials";
-
+ */
 export default function Header(){
    return(
    <header className="flex flex-col items-center gap-2 row-start-1">
