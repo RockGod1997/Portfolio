@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  /* const [darkMode, setDarkMode] = useState(false);
 
   // Sync theme with localStorage and initial page load
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Home() {
       setDarkMode(false);
       document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, []); */
 
 /*   // Toggle dark mode
   const toggleDarkMode = () => {
