@@ -20,7 +20,7 @@ export default function Home() {
     }
   }, []);
 
-  // Toggle dark mode
+/*   // Toggle dark mode
   const toggleDarkMode = () => {
     const newMode = !darkMode;
     setDarkMode(newMode);
@@ -32,18 +32,18 @@ export default function Home() {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  };
+  }; */
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
       {/* Dark Mode Toggle */}
-      <button
+    {/*   <button
         onClick={toggleDarkMode}
         className="absolute top-4 right-4 p-2 border rounded bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
       >
         {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
       </button>
-
+ */}
       {/* Header */}
    <Header/>
 
