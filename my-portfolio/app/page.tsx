@@ -34,11 +34,11 @@ export default function Home() {
     }; */
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
+    <div className=" bg-custom-bg bg-cover bg-center min-h-screen grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
       {/* Dark Mode Toggle */}
       {/*   <button
         onClick={toggleDarkMode}
-        className="absolute top-4 right-4 p-2 border rounded bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+        className="absolute top-4 right-4 p-2 border rounded bg-gray-200 bg-opacity-30 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
       >
         {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
       </button>
@@ -77,13 +77,13 @@ export default function Home() {
         {/* Skills */}
         <section className="w-full">
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">JavaScript</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">React Native</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">Angular</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">CSS</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">HTML5</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">Python</li>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center font-semibold">
+            <li className="bg-gray-100  bg-opacity-30 p-4 rounded-full">JavaScript</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">React Native</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">Angular</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">CSS</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">HTML5</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">Python</li>
           </ul>
         </section>
 
@@ -92,7 +92,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Project 1 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
             <p className="text-gray-600 dark:text-gray-300 mb-4"><em>React Native, Mapbox, Gluestack UI</em></p>
               {/* <Image
                 src="/project1.png" // Replace with your project image
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
 
             {/* Project 2 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
             <p className="text-gray-600 dark:text-gray-300 mb-4"><em>Tableau</em></p>
               <Image 
                 src="/covid-dashboard.png" // Replace with your project image
