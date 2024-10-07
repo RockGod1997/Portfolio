@@ -25,3 +25,12 @@ body {
     text-wrap: balance;
   }
 }
+
+.svg-icon path {
+  fill: #000; /* Black for light theme */
+}
+
+/* Dark Theme */
+.dark .svg-icon path {
+  fill: #fff !important; /* White for dark theme */
+}
