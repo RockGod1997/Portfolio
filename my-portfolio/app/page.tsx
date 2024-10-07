@@ -56,26 +56,34 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <div className="mt-4">
+          <div className="mt-4 ">
+        
             <a
               href="/SAMARTHAGRAWAL_RESUME.pdf" // Ensure the resume is in the public folder
               download="SamarthAgrawal_Resume.pdf"
-              className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
-            >
+              className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
+            >  <div className="flex text-center gap-2"> 
+            <Image 
+            src="/download.svg" // Replace with your project image
+            alt="download"
+            width={20}
+            height={20}
+            className="rounded-full"
+            />  
               Download Resume
-            </a>
+              </div> </a>
           </div>
         </section>
         {/* Skills */}
         <section className="w-full">
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">JavaScript</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">React Native</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">Angular</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">CSS</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">HTML5</li>
-            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded">Python</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">JavaScript</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">React Native</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">Angular</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">CSS</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">HTML5</li>
+            <li className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">Python</li>
           </ul>
         </section>
 
@@ -84,7 +92,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Project 1 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <p className="text-gray-600 dark:text-gray-300 mb-4"><em>React Native, Mapbox, Gluestack UI</em></p>
               {/* <Image
                 src="/project1.png" // Replace with your project image
@@ -108,7 +116,7 @@ export default function Home() {
             </div>
 
             {/* Project 2 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded shadow-lg">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <p className="text-gray-600 dark:text-gray-300 mb-4"><em>Tableau</em></p>
               <Image 
                 src="/covid-dashboard.png" // Replace with your project image
