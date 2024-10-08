@@ -26,11 +26,32 @@ body {
   }
 }
 
-.svg-icon path {
-  fill: #000; /* Black for light theme */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Dark Theme */
-.dark .svg-icon path {
-  fill: #fff !important; /* White for dark theme */
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }
