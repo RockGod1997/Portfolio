@@ -28,7 +28,7 @@ export default function Home() {
             className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors transform hover:scale-105"
           >
             <div className="flex justify-center sm:justify-start gap-2">
-              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full" />
+              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full filter invert" />
               Download Resume
             </div>
           </a>
