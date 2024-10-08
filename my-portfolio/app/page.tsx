@@ -1,84 +1,43 @@
-"use client"; // This ensures that this component runs on the client-side
+"use client";
 
 import Image from "next/image";
 import Footer from "./components/footer";
 import Header from "./components/header";
 
 export default function Home() {
-  /* const [darkMode, setDarkMode] = useState(false);
-
-  // Sync theme with localStorage and initial page load
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
-  }, []); */
-
-  /*   // Toggle dark mode
-    const toggleDarkMode = () => {
-      const newMode = !darkMode;
-      setDarkMode(newMode);
-  
-      if (newMode) {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-    }; */
-
   return (
-    <div className=" bg-custom-bg bg-cover bg-center min-h-screen grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
-      {/* Dark Mode Toggle */}
-      {/*   <button
-        onClick={toggleDarkMode}
-        className="absolute top-4 right-4 p-2 border rounded bg-gray-200 bg-opacity-30 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-      >
-        {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-      </button>
- */}
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen px-4 sm:px-10 py-8 sm:py-10 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors">
       {/* Header */}
       <Header />
 
-      {/* Main Section */}
+      {/* Main content */}
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full max-w-4xl">
-        {/* About Me */}
-        <section className="text-center sm:text-left">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <p className="text-gray-700 dark:text-gray-300">
-            Hello! I&apos;m a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
+        {/* About Section */}
+        <section className="text-center sm:text-left mt-4">
+          <p className="text-gray-100 dark:text-gray-300 text-base sm:text-lg">
+            Hello! I'm a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
           </p>
         </section>
-        <section>
-          <div className="mt-4 ">
-        
-            <a
-              href="/SAMARTHAGRAWAL_RESUME.pdf" // Ensure the resume is in the public folder
-              download="SamarthAgrawal_Resume.pdf"
-              className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
-            >  <div className="flex text-center gap-2"> 
-            <Image 
-            src="/download.svg" // Replace with your project image
-            alt="download"
-            width={20}
-            height={20}
-            className="rounded-full"
-            />  
+
+        {/* Resume Section */}
+        <section className="text-center sm:text-left">
+          <a
+            href="/SAMARTHAGRAWAL_RESUME.pdf"
+            download="SamarthAgrawal_Resume.pdf"
+            className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
+          >
+            <div className="flex justify-center sm:justify-start gap-2">
+              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full" />
               Download Resume
-              </div> </a>
-          </div>
+            </div>
+          </a>
         </section>
-        {/* Skills */}
+
+        {/* Skills Section */}
         <section className="w-full">
-          <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+          <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">Skills</h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center font-semibold">
-            <li className="bg-gray-100  bg-opacity-30 p-4 rounded-full">JavaScript</li>
+            <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">JavaScript</li>
             <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">React Native</li>
             <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">Angular</li>
             <li className="bg-gray-100 bg-opacity-30 p-4 rounded-full">CSS</li>
@@ -87,104 +46,83 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Projects */}
+        {/* Projects Section */}
         <section className="w-full">
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+          <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Project 1 */}
-            <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
-            <p className="text-gray-600 dark:text-gray-300 mb-4"><em>React Native, Mapbox, Gluestack UI</em></p>
-              {/* <Image
-                src="/project1.png" // Replace with your project image
-                alt="Project 1"
-                width={400}
-                height={200}
-                className="rounded"
-              /> */}
-              <iframe width="360" height="315" className="text-center"  
-                src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt"
-                 title="YouTube video player" frameBorder="0" 
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-               
-              <h3 className="text-xl font-semibold mt-4">Ecocompass</h3>
-              <p className="text-gray-600 dark:text-gray-300"> A sustainable wayfinding application.</p>
-          
-              <div className="mt-4">
-                <a href="https://github.com/ecocompass/wayfinding" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline">View on GitHub</a>
+            <div className="bg-white bg-opacity-30 p-4 rounded-xl shadow-lg max-w-md">
+            <h3 className="text-xl font-semibold mt-4">Ecocompass</h3>
+              
+             
+              <div className="aspect-w-16 aspect-h-9 w-full mt-2 lg:aspect-h-12  ">
+                <iframe
+                  className="w-full h-full rounded-xl"
+                  src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-gray-300 dark:text-gray-300 mb-4 mt-2">
+                <em>React Native, Mapbox, Gluestack UI</em>
+                </p>
+              <p className="text-gray-300 dark:text-gray-300">A sustainable wayfinding application.</p>
+              <div className="mt-4 flex items-center">
+             
+           
+                <a href="https://github.com/ecocompass/wayfinding" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                <Image src="/github.svg" alt="GitHub" width={16} height={16} className="filter invert mr-2" />
+                  View on GitHub 
+                </a>
               </div>
             </div>
 
             {/* Project 2 */}
             <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
-            <p className="text-gray-600 dark:text-gray-300 mb-4"><em>Tableau</em></p>
-              <Image 
-                src="/covid-dashboard.png" // Replace with your project image
-                alt="Project 2"
-                width={400}
-                height={315}
-                className="rounded mt-4"
-              />
-              <h3 className="text-xl font-semibold mt-6">Covid Dashboard</h3>
-              <p className="text-gray-600 dark:text-gray-300">Displays the impact of Covid over the globe.</p>
-              <div className="mt-4">
-                <a href="https://github.com/RockGod1997/covid19-dashboard" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline">View on GitHub</a>
+            <h3 className="text-xl font-semibold ">Covid-19 Dashboard</h3>
+              
+              <Image src="/covid-dashboard.png" alt="Project 2" width={384} height={315} className="rounded-lg mt-4 w-full" />
+              <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
+                <em>Tableau</em>
+              </p>
+              <p className="text-gray-300 dark:text-gray-300">Displays the impact of Covid-19 over the globe.</p>
+              <div className="mt-4 flex items-center">
+                <a href="https://github.com/RockGod1997/covid19-dashboard" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
+                <Image src="/github.svg" alt="GitHub" width={16} height={16} className="filter invert mr-2" />
+           
+                  View on GitHub
+                  
+               
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact */}
-        <section className="text-center sm:text-left">
-          <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-          <p className=" flex gap-2 text-gray-700 dark:text-gray-300">
+        {/* Contact Section */}
+        <section className="w-full">
+          <h2 className="text-xl sm:text-2xl text-gray-100 font-semibold mb-4 text-center">Contact</h2>
+          <p className="text-gray-300 dark:text-gray-300 text-center">
             Feel free to reach out via email at
-             <Image  
-            aria-hidden
-            src="/gmail.svg" // Replace with your email icon
-            alt="Email"
-            width={20}
-            height={12}
-          />  <a href="mailto:agrawal.samarth123@gmail.com" className="text-blue-500 dark:text-blue-400 hover:underline">agrawal.samarth123@gmail.com</a>
-          
-            or connect on{" "}
-            <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/RockGod1997"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           <Image
-            aria-hidden
-            src="/github.svg" // Replace with your GitHub icon
-            alt="GitHub"
-            width={16}
-            height={16}
-          /> 
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://www.linkedin.com/in/samarth-agrawal-433880192"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           <Image
-            aria-hidden
-            src="/linkedin.svg" // Replace with your LinkedIn icon
-            alt="LinkedIn"
-            width={16}
-            height={16}
-          /> 
-        </a>
+            <span className="flex justify-center gap-2">
+              <Image src="/gmail.svg" alt="Email" width={16} height={16} className="filter invert" />
+              <a href="mailto:agrawal.samarth123@gmail.com" className="text-blue-500 dark:text-blue-400 hover:underline">agrawal.samarth123@gmail.com</a>
+            </span>
+            
+            <span className="flex justify-center gap-2 mt-2">
+            or connect on
+              <a href="https://www.linkedin.com/in/samarth-agrawal-433880192" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline">
+                <Image src="/linkedin.svg" alt="LinkedIn" width={16} height={16} className="filter invert mt-1"  />
+              </a>
+            </span>
           </p>
-          
-      
         </section>
       </main>
 
       {/* Footer */}
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-
         <Footer />
       </footer>
     </div>
