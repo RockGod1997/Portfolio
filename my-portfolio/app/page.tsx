@@ -15,7 +15,7 @@ export default function Home() {
         {/* About Section */}
         <section className="text-center sm:text-left mt-4">
           <p className="text-gray-100 dark:text-gray-300 text-base sm:text-lg">
-            Hello! I'm a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
+            Hello! I&apos;m a passionate software engineer with expertise in building responsive, high-performance websites and mobile applications. With a focus on user-centered design and modern technologies, I enjoy solving problems and turning ideas into reality.
           </p>
         </section>
 
