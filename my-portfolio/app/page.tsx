@@ -28,7 +28,7 @@ export default function Home() {
             className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors transform hover:scale-105"
           >
             <div className="flex justify-center sm:justify-start gap-2">
-              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full filter invert" />
+              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full filter" />
               Download Resume
             </div>
           </a>
@@ -42,10 +42,10 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Project 1 */}
             <div className="bg-white bg-opacity-30 p-4 rounded-xl shadow-lg max-w-md slide-in">
-              <h3 className="text-xl font-semibold mt-4">Ecocompass</h3>
+              <h3 className="text-xl font-semibold mb-2 mt-2">Ecocompass</h3>
 
 
-              <div className="aspect-w-16 aspect-h-9 w-full mt-2 lg:aspect-h-12  ">
+              <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12  ">
                 <iframe
                   className="w-full h-full rounded-xl"
                   src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt"
