@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Slider from "./components/slider";
+import ProjectsSection from "./components/project";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
             className="inline-block p-3 bg-blue-500 dark:bg-blue-600 text-white rounded-full hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors transform hover:scale-105"
           >
             <div className="flex justify-center sm:justify-start gap-2">
-              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full filter" />
+              <Image src="/download.svg" alt="download" width={20} height={20} className="rounded-full filter invert" />
               Download Resume
             </div>
           </a>
@@ -37,53 +38,7 @@ export default function Home() {
           <Slider />
         </div>
         {/* Projects Section */}
-        <section className="w-full">
-          <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {/* Project 1 */}
-            <div className="bg-white bg-opacity-30 p-4 rounded-xl shadow-lg max-w-md slide-in">
-              <h3 className="text-xl font-semibold mb-2 mt-2">Ecocompass</h3>
-
-
-              <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12  ">
-                <iframe
-                  className="w-full h-full rounded-xl"
-                  src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <p className="text-gray-300 dark:text-gray-300 mb-4 mt-2">
-                <em>React Native, Mapbox, Gluestack UI</em>
-              </p>
-              <p className="text-gray-300 dark:text-gray-300">A sustainable wayfinding application.</p>
-              <div className="mt-4 flex items-center">
-                <a href="https://github.com/ecocompass/wayfinding" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
-                  <Image src="/github.svg" alt="GitHub" width={16} height={16} className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300" />
-                  View on GitHub
-                </a>
-              </div>
-            </div>
-            {/* Project 2 */}
-            <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg slide-in">
-              <h3 className="text-xl font-semibold ">Covid-19 Dashboard</h3>
-
-              <Image src="/covid-dashboard.png" alt="Project 2" width={384} height={315} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
-              <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
-                <em>Tableau</em>
-              </p>
-              <p className="text-gray-300 dark:text-gray-300">Displays the impact of Covid-19 over the globe.</p>
-              <div className="mt-4 flex items-center">
-                <a href="https://github.com/RockGod1997/covid19-dashboard" target="_blank" className="text-blue-500 dark:text-blue-400 hover:underline flex items-center">
-                  <Image src="/github.svg" alt="GitHub" width={16} height={16} className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300" />
-                  View on GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+       <ProjectsSection/>
 
         {/* Contact Section */}
         <section className="w-full">
