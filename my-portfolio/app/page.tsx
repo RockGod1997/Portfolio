@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </a>
         </section>
-        <div className="container mx-auto px-4 w-60 lg:w-full">
+        <div className="container w-60 lg:w-full">
           <Slider />
         </div>
         {/* Projects Section */}
