@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                 </div>
                 <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
                     <h3 className="text-xl font-semibold">Maze Solver</h3>
-                    <Image src="/maze.png" alt="Project 4" width={384} height={215} style={{ height: '300px' }} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
+                    <Image src="/Maze.png" alt="Project 4" width={384} height={215} style={{ height: '300px' }} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
                     <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
                         <em>Python</em>
                     </p>
