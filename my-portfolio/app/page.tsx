@@ -51,7 +51,36 @@ export default function Home() {
             </a>
           </Link>
         </section>
+
         <div className="container w-60 lg:w-full">
+          <section
+            className="w-full flex flex-col items-center"
+            style={{ zIndex: "1000" }}
+          >
+            <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
+              Skills
+            </h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center font-semibold items-center lg:gap-4">
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-1">
+                JavaScript
+              </li>
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-2">
+                React Native
+              </li>
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-3">
+                Angular
+              </li>
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-4">
+                CSS
+              </li>
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-1">
+                HTML5
+              </li>
+              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-2">
+                Python
+              </li>
+            </ul>
+          </section>
           <Slider />
         </div>
         {/* Projects Section */}

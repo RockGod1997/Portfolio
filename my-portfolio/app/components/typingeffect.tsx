@@ -25,7 +25,9 @@ const TypingEffect: React.FC<TypingEffectProps> = ({ text, speed = 150 }) => {
     return () => clearInterval(intervalId);
   }, [text, speed]);
 
-  return <span className="text-gray-100 dark:text-gray-300">{displayedText}</span>;
+  return (
+    <span className="text-gray-100 dark:text-gray-300">{displayedText}</span>
+  );
 };
 
 export default TypingEffect;
