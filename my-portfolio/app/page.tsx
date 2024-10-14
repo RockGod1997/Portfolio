@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen px-4 sm:px-10 py-8 sm:py-10 font-[family-name:var(--font-geist-sans)] dark:bg-gray-900 dark:text-white transition-colors fade-in">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen px-4 sm:px-10 py-8 sm:py-10 font-[family-name:var(--font-geist-sans)] transition-colors fade-in">
       {/* Header */}
       <Header />
       {/* Main content */}
@@ -29,17 +29,20 @@ export default function Home() {
           <a
             href="/SAMARTHAGRAWAL_RESUME.pdf"
             download="SamarthAgrawal_Resume.pdf"
-            className="inline-block p-3 bg-blue-500  text-white rounded-full hover:bg-blue-600  transition-colors transform hover:scale-105"
+            className="inline-block relative p-4  bg-gray-700 bg-opacity-30   text-white font-semibold rounded-full shadow-lg hover:bg-gradient-to-l hover:scale-110 transform transition-all duration-300 ease-in-out"
           >
-            <div className="flex justify-center sm:justify-start gap-2">
-              <Image
-                src="/download.svg"
-                alt="download"
-                width={20}
-                height={20}
-                className="rounded-full filter invert"
-              />
-              Resume
+            <div className="flex justify-center sm:justify-start items-center gap-3">
+              <div className="w-8 h-8  flex items-center justify-center transform transition-transform duration-300 hover:rotate-45">
+                <Image
+                  src="/download.svg"
+                  alt="download"
+                  width={25}
+                  height={20}
+                  className="filter invert"
+                />
+              </div>
+              <span className="relative z-10">Download Resume</span>
+              <div className="absolute inset-0 w-full h-full rounded-full  blur-lg opacity-50 transition-all duration-300 ease-in-out"></div>
             </div>
           </a>
         </section>
@@ -52,31 +55,33 @@ export default function Home() {
         </section>
         <div className="container w-60 lg:w-full">
           <section
-            className="w-full flex flex-col items-center"
+            className="w-full flex flex-col items-center relative"
             style={{ zIndex: "1000" }}
           >
-            <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
+            <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-6">
               Skills
             </h2>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center font-semibold items-center lg:gap-4">
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-1">
-                JavaScript
-              </li>
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-2">
-                React Native
-              </li>
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-3">
-                Angular
-              </li>
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-4">
-                CSS
-              </li>
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-1">
-                HTML5
-              </li>
-              <li className="bg-gray-100 bg-opacity-30 w-[100px] h-[100px] rounded-full border border-gray-400 hover:bg-blue-500 hover:text-white hover:shadow-lg transition-colors duration-300 flex items-center justify-center text-xs sm:text-base animate-float-2">
-                Python
-              </li>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center font-semibold items-center lg:gap-6">
+              {[
+                "JavaScript",
+                "React Native",
+                "Angular",
+                "CSS",
+                "HTML5",
+                "Python",
+              ].map((skill, index) => (
+                <li
+                  key={skill}
+                  className={`bg-gray-700 bg-opacity-30 text-white w-[120px] h-[120px] rounded-full border border-gray-300 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-110 hover:rotate-[15deg] flex items-center justify-center text-xs sm:text-base relative animate-float-${
+                    index + 1
+                  }`}
+                  style={{
+                    boxShadow: "0 8px 15px rgba(0, 0, 0, 0.3)", // shadow for depth
+                  }}
+                >
+                  {skill}
+                </li>
+              ))}
             </ul>
           </section>
           <Slider />
