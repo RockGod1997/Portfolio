@@ -1,5 +1,3 @@
-// components/TypingEffect.tsx
-
 import React, { useEffect, useState } from "react";
 
 interface TypingEffectProps {
@@ -26,7 +24,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({ text, speed = 150 }) => {
   }, [text, speed]);
 
   return (
-    <span className="text-gray-100 dark:text-gray-300">{displayedText}</span>
+    <span className="text-gray-100">{displayedText}</span>
   );
 };
 

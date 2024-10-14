@@ -51,10 +51,10 @@ const ProjectsSection = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <p className="text-gray-300 dark:text-gray-300 mb-4 mt-2">
+          <p className="text-gray-300  mb-4 mt-2">
             <em>React Native, Mapbox, Gluestack UI</em>
           </p>
-          <p className="text-gray-300 dark:text-gray-300">
+          <p className="text-gray-300 ">
             A sustainable wayfinding application.
           </p>
           <div className="mt-4 flex items-center">
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
               href="https://github.com/ecocompass/wayfinding"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 dark:text-blue-400 hover:underline flex items-center"
+              className="text-blue-500  hover:underline flex items-center"
             >
               <Image
                 src="/github.svg"
@@ -84,10 +84,10 @@ const ProjectsSection = () => {
             height={315}
             className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
           />
-          <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
+          <p className="text-gray-300  mb-4 mt-1">
             <em>Tableau</em>
           </p>
-          <p className="text-gray-300 dark:text-gray-300">
+          <p className="text-gray-300 ">
             Displays the impact of Covid-19 over the globe.
           </p>
           <div className="mt-4 flex items-center">
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
               href="https://github.com/RockGod1997/covid19-dashboard"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 dark:text-blue-400 hover:underline flex items-center"
+              className="text-blue-500  hover:underline flex items-center"
             >
               <Image
                 src="/github.svg"
@@ -124,10 +124,10 @@ const ProjectsSection = () => {
             }}
             className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
           />
-          <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
+          <p className="text-gray-300  mb-4 mt-1">
             <em>Python Flask, AWS</em>
           </p>
-          <p className="text-gray-300 dark:text-gray-300">
+          <p className="text-gray-300">
             Collects and display real time weather and temperature sensor
             information.
           </p>
@@ -136,7 +136,7 @@ const ProjectsSection = () => {
               href="https://github.com/RockGod1997/urban-app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 dark:text-blue-400 hover:underline flex items-center"
+              className="text-blue-500  hover:underline flex items-center"
             >
               <Image
                 src="/github.svg"
@@ -159,10 +159,10 @@ const ProjectsSection = () => {
             style={{ height: "315px" }}
             className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
           />
-          <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
+          <p className="text-gray-300 mb-4 mt-1">
             <em>Python</em>
           </p>
-          <p className="text-gray-300 dark:text-gray-300">
+          <p className="text-gray-300">
             A maze generator + solver using A*, BFS, DFS, MDP Value and Policy
             Iterations algorithms.
           </p>
@@ -171,7 +171,7 @@ const ProjectsSection = () => {
               href="https://github.com/RockGod1997/maze-game"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 dark:text-blue-400 hover:underline flex items-center"
+              className="text-blue-500 hover:underline flex items-center"
             >
               <Image
                 src="/github.svg"

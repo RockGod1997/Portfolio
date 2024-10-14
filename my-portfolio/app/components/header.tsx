@@ -17,10 +17,8 @@ export default function Header() {
         />
         <h1 className="text-4xl text-gray-100 font-bold">Samarth Agrawal</h1>
       </div>
-      <p className="text-lg text-gray-100 dark:text-gray-300 text-center">
-        {" "}
-        {/* Added text-center for centering */}
-        <TypingEffect text="S oftware Engineer" />
+      <p className="text-lg text-gray-100 text-center">
+        <TypingEffect text="S oftware Engineer"/>
       </p>
     </header>
   );
