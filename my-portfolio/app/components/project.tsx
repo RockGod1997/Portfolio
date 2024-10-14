@@ -35,12 +35,12 @@ const ProjectsSection = () => {
             <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Project 1 */}
-                <div className="bg-white bg-opacity-30 p-4 rounded-xl shadow-lg max-w-md">
-                    <h3 className="text-xl font-semibold mb-2 mt-2">Ecocompass</h3>
+                <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg max-w-md">
+                    <h3 className="text-xl font-semibold mb-2 mt-2">Eco-Compass</h3>
                     <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12">
                         <iframe
                             className="w-full h-full rounded-xl"
-                            src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt"
+                            src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                         </a>
                     </div>
                 </div>
-                <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
+                <div className="bg-white bg-opacity-30 p-8 rounded-xl shadow-lg">
                     <h3 className="text-xl font-semibold">Covid-19 Dashboard</h3>
                     <Image src="/covid-dashboard.png" alt="Project 2" width={384} height={315} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
                     <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                 </div>
                 <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
 
-                    <h3 className="text-xl font-semibold">Weather + Sensor Application</h3>
+                    <h3 className="text-xl font-semibold">Urban Sensor Application</h3>
 
                     <Image src="/urban.png" alt="Project 3" width={384} height={315} style={{
                         height: '315px', width: '384px', objectFit: 'cover',
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                 </div>
                 <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
                     <h3 className="text-xl font-semibold">Maze Solver</h3>
-                    <Image src="/Maze.png" alt="Project 4" width={384} height={215} style={{ height: '300px' }} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
+                    <Image src="/Maze.png" alt="Project 4" width={384} height={315} style={{ height: '315px' }} className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300" />
                     <p className="text-gray-300 dark:text-gray-300 mb-4 mt-1">
                         <em>Python</em>
                     </p>
