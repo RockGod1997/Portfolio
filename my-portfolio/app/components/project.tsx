@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg max-w-md">
+    <div className="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg max-w-md">
       <h3 className="text-xl text-gray-300 mb-2 mt-2">{project.title}</h3>
       <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12">
         {project.video ? (

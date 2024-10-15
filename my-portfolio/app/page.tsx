@@ -29,7 +29,7 @@ export default function Home() {
           <a
             href="/SAMARTHAGRAWAL_RESUME.pdf"
             download="SamarthAgrawal_Resume.pdf"
-            className="inline-block relative p-4  bg-gray-700 bg-opacity-30   text-white font-semibold rounded-full shadow-lg hover:bg-gradient-to-l hover:scale-110 transform transition-all duration-300 ease-in-out"
+            className="inline-block relative p-4  bg-gray-800 bg-opacity-30  border border-gray-600  text-white font-semibold rounded-lg shadow-lg hover:bg-gradient-to-l hover:scale-110 transform transition-all duration-300 ease-in-out"
           >
             <div className="flex justify-center sm:justify-start items-center gap-3">
               <div className="w-8 h-8  flex items-center justify-center transform transition-transform duration-300 hover:rotate-45">
