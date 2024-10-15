@@ -3,7 +3,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
+const Title: string = "";
+const Subtitle: string = "";
+const Date: string = "";
+
+const Card = ({ title = Title, subtitle = Subtitle, date = Date }) => (
+  <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600 hover:shadow-2xl transition-colors duration-300 shadow-md">
+    <h3 className="text-gray-100 text-lg">{title}</h3>
+    {subtitle && <p className="text-gray-300 mt-2 text-sm">{subtitle}</p>}
+    {date && <p className="text-gray-300 mt-2 text-sm">{date}</p>}
+  </div>
+);
+
 const Slider = () => {
+  const educationData = [
+    {
+      title: "Trinity College Dublin",
+      subtitle: "MSc in Computer Science, Future Networked System",
+      date: "Sep 2023 - Sep 2024",
+    },
+    {
+      title: "Bangalore Institute of Technology",
+      subtitle: "BE in Computer Science",
+      date: "2016 - 2020",
+    },
+  ];
+
+  const workExperienceData = [
+    {
+      title: "Tata Consultancy Services",
+      subtitle: "Systems Engineer",
+      date: "Jan 2023 - Aug 2023",
+    },
+    {
+      title: "Accenture",
+      subtitle: "Application Development Associate",
+      date: "Feb 2021 - Aug 2022",
+    },
+  ];
+
   return (
     <div className="w-full">
       <Swiper
@@ -20,25 +58,9 @@ const Slider = () => {
               Education
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Card 1 */}
-              <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600  hover:shadow-2xl transition-colors duration-300 shadow-md">
-                <h3 className="text-gray-100 text-lg ">
-                  Trinity College Dublin
-                </h3>
-                <p className="text-gray-300 mt-2 text-sm">
-                  MSc in Computer Science,
-                  <span className="text-gray-400 text-xs"> Future Networked System</span>
-                </p>
-                <p className="text-gray-300 mt-2 text-sm">Sep 2023 - Sep 2024</p>
-              </div>
-              {/* Card 2 */}
-              <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600  hover:shadow-2xl transition-colors duration-300 shadow-md">
-                <h3 className="text-gray-100 text-lg ">
-                  Bangalore Institute of Technology
-                </h3>
-                <p className="text-gray-300 mt-2 text-sm">BE in Computer Science</p>
-                <p className="text-gray-300 mt-2 text-sm">2016-2020</p>
-              </div>
+              {educationData.map((edu, index) => (
+                <Card key={index} {...edu} />
+              ))}
             </div>
           </section>
         </SwiperSlide>
@@ -50,20 +72,9 @@ const Slider = () => {
               Work Experience
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Card 1 */}
-              <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600  hover:shadow-2xl transition-colors duration-300 shadow-md">
-                <h3 className="text-gray-100 text-lg ">
-                  Tata Consultancy Services
-                </h3>
-                <p className="text-gray-300 mt-2 text-sm">Systems Engineer</p>
-                <p className="text-gray-300 mt-2 text-sm">Jan 2023 - Aug 2023</p>
-              </div>
-              {/* Card 2 */}
-              <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600  hover:shadow-2xl transition-colors duration-300 shadow-md">
-                <h3 className="text-gray-100 text-lg ">Accenture</h3>
-                <p className="text-gray-300 mt-2 text-sm">Application Development Associate</p>
-                <p className="text-gray-300 mt-2 text-sm">Feb 2021 - Aug 2022</p>
-              </div>
+              {workExperienceData.map((work, index) => (
+                <Card key={index} {...work} />
+              ))}
             </div>
           </section>
         </SwiperSlide>

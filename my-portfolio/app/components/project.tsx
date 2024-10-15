@@ -1,62 +1,81 @@
-import { useEffect, useRef, useState } from "react";
+// components/Slider.tsx
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const ProjectCard = ({ project }) => {
+// types.ts
+export interface Project {
+  title: string;
+  description?: string;
+  technologies?: string;
+  video?: string;
+  image?: string; // Made image optional for projects that might only have video
+  github?: string;
+}
+
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const { title, description, technologies, video, image, github } = project; // Destructure project
+
   return (
     <div className="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg max-w-md">
-      <h3 className="text-xl text-gray-300 mb-2 mt-2">{project.title}</h3>
+      <h3 className="text-xl text-gray-300 mb-2 mt-2">{title}</h3>
       <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12">
-        {project.video ? (
+        {video ? (
           <iframe
             className="w-full h-full rounded-xl mt-4"
-            src={project.video}
-            title={project.title}
+            src={video}
+            title={title}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
         ) : (
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={384}
-            height={315}
-            style={{
-              objectFit: "cover",
-              objectPosition: "top", // Adjusted to keep the specific styling
-            }}
-            className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
-          />
+          image && ( // Ensure image exists before rendering
+            <Image
+              src={image}
+              alt={title}
+              width={384}
+              height={315}
+              style={{
+                objectFit: "cover",
+                objectPosition: "top",
+              }}
+              className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
+            />
+          )
         )}
       </div>
-      <p className="text-gray-300 mb-4 mt-4">
-        <em>{project.technologies}</em>
-      </p>
-      <p className="text-gray-300">{project.description}</p>
-      <div className="mt-4 flex items-center">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline flex items-center"
-        >
-          <Image
-            src="/github.svg"
-            alt="GitHub"
-            width={16}
-            height={16}
-            className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
-          />
-          View on GitHub
-        </a>
-      </div>
+      {technologies && ( // Render only if technologies exist
+        <p className="text-gray-300 mb-4 mt-6">
+          <em>{technologies}</em>
+        </p>
+      )}
+      {description && <p className="text-gray-300">{description}</p>} 
+      {github && ( // Render link only if github exists
+        <div className="mt-4 flex items-center">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline flex items-center"
+          >
+            <Image
+              src="/github.svg"
+              alt="GitHub"
+              width={16}
+              height={16}
+              className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
+            />
+            View on GitHub
+          </a>
+        </div>
+      )}
     </div>
   );
 };
 
 const ProjectsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Specify the type for sectionRef
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,13 +99,13 @@ const ProjectsSection = () => {
     };
   }, []);
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Eco-Compass",
       video: "https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1",
       technologies: "React Native, Mapbox, Gluestack UI",
       description: "A sustainable wayfinding application.",
-      github: "https://github.com/ecocompass/wayfinding",
+      github: "https://github.com/ecocompass/wayfinding"
     },
     {
       title: "Covid-19 Dashboard",
@@ -122,8 +141,8 @@ const ProjectsSection = () => {
         Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} /> // Use project.title as the key for better uniqueness
         ))}
       </div>
     </section>
