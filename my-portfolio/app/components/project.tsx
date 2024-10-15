@@ -1,6 +1,59 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
+const ProjectCard = ({ project }) => {
+  return (
+    <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg max-w-md">
+      <h3 className="text-xl text-gray-300 mb-2 mt-2">{project.title}</h3>
+      <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12">
+        {project.video ? (
+          <iframe
+            className="w-full h-full rounded-xl mt-4"
+            src={project.video}
+            title={project.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={384}
+            height={315}
+            style={{
+              objectFit: "cover",
+              objectPosition: "top", // Adjusted to keep the specific styling
+            }}
+            className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
+          />
+        )}
+      </div>
+      <p className="text-gray-300 mb-4 mt-4">
+        <em>{project.technologies}</em>
+      </p>
+      <p className="text-gray-300">{project.description}</p>
+      <div className="mt-4 flex items-center">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline flex items-center"
+        >
+          <Image
+            src="/github.svg"
+            alt="GitHub"
+            width={16}
+            height={16}
+            className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
+          />
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const ProjectsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -27,6 +80,37 @@ const ProjectsSection = () => {
     };
   }, []);
 
+  const projects = [
+    {
+      title: "Eco-Compass",
+      video: "https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1",
+      technologies: "React Native, Mapbox, Gluestack UI",
+      description: "A sustainable wayfinding application.",
+      github: "https://github.com/ecocompass/wayfinding",
+    },
+    {
+      title: "Covid-19 Dashboard",
+      image: "/covid-dashboard.png",
+      technologies: "Tableau",
+      description: "Displays the impact of Covid-19 over the globe.",
+      github: "https://github.com/RockGod1997/covid19-dashboard",
+    },
+    {
+      title: "Urban Sensor Application",
+      image: "/urban.png",
+      technologies: "Python Flask, AWS",
+      description: "Collects and displays real-time weather and temperature sensor information.",
+      github: "https://github.com/RockGod1997/urban-app",
+    },
+    {
+      title: "Maze Solver",
+      image: "/Maze.png",
+      technologies: "Python",
+      description: "A maze generator + solver using A*, BFS, DFS, MDP Value and Policy Iterations algorithms.",
+      github: "https://github.com/RockGod1997/maze-game",
+    },
+  ];
+
   return (
     <section
       ref={sectionRef}
@@ -38,152 +122,9 @@ const ProjectsSection = () => {
         Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {/* Project 1 */}
-        <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg max-w-md">
-          <h3 className="text-xl font-semibold mb-2 mt-2">Eco-Compass</h3>
-          <div className="aspect-w-16 aspect-h-9 w-full mt-4 lg:aspect-h-12">
-            <iframe
-              className="w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <p className="text-gray-300  mb-4 mt-2">
-            <em>React Native, Mapbox, Gluestack UI</em>
-          </p>
-          <p className="text-gray-300 ">
-            A sustainable wayfinding application.
-          </p>
-          <div className="mt-4 flex items-center">
-            <a
-              href="https://github.com/ecocompass/wayfinding"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500  hover:underline flex items-center"
-            >
-              <Image
-                src="/github.svg"
-                alt="GitHub"
-                width={16}
-                height={16}
-                className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
-              />
-              View on GitHub
-            </a>
-          </div>
-        </div>
-        <div className="bg-white bg-opacity-30 p-8 rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold">Covid-19 Dashboard</h3>
-          <Image
-            src="/covid-dashboard.png"
-            alt="Project 2"
-            width={384}
-            height={315}
-            className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
-          />
-          <p className="text-gray-300  mb-4 mt-1">
-            <em>Tableau</em>
-          </p>
-          <p className="text-gray-300 ">
-            Displays the impact of Covid-19 over the globe.
-          </p>
-          <div className="mt-4 flex items-center">
-            <a
-              href="https://github.com/RockGod1997/covid19-dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500  hover:underline flex items-center"
-            >
-              <Image
-                src="/github.svg"
-                alt="GitHub"
-                width={16}
-                height={16}
-                className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
-              />
-              View on GitHub
-            </a>
-          </div>
-        </div>
-        <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold">Urban Sensor Application</h3>
-
-          <Image
-            src="/urban.png"
-            alt="Project 3"
-            width={384}
-            height={315}
-            style={{
-              height: "315px",
-              width: "384px",
-              objectFit: "cover",
-              objectPosition: "top",
-            }}
-            className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
-          />
-          <p className="text-gray-300  mb-4 mt-1">
-            <em>Python Flask, AWS</em>
-          </p>
-          <p className="text-gray-300">
-            Collects and display real time weather and temperature sensor
-            information.
-          </p>
-          <div className="mt-4 flex items-center">
-            <a
-              href="https://github.com/RockGod1997/urban-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500  hover:underline flex items-center"
-            >
-              <Image
-                src="/github.svg"
-                alt="GitHub"
-                width={16}
-                height={16}
-                className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
-              />
-              View on GitHub
-            </a>
-          </div>
-        </div>
-        <div className="bg-white bg-opacity-30 p-6 rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold">Maze Solver</h3>
-          <Image
-            src="/Maze.png"
-            alt="Project 4"
-            width={384}
-            height={315}
-            style={{ height: "315px" }}
-            className="rounded-lg mt-4 w-full transform hover:scale-105 transition-transform duration-300"
-          />
-          <p className="text-gray-300 mb-4 mt-1">
-            <em>Python</em>
-          </p>
-          <p className="text-gray-300">
-            A maze generator + solver using A*, BFS, DFS, MDP Value and Policy
-            Iterations algorithms.
-          </p>
-          <div className="mt-4 flex items-center">
-            <a
-              href="https://github.com/RockGod1997/maze-game"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline flex items-center"
-            >
-              <Image
-                src="/github.svg"
-                alt="GitHub"
-                width={16}
-                height={16}
-                className="filter invert mr-2 transform hover:rotate-12 transition-transform duration-300"
-              />
-              View on GitHub
-            </a>
-          </div>
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </section>
   );

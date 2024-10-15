@@ -5,8 +5,6 @@ export default function Header() {
     <header className="flex flex-col items-center gap-2 row-start-1">
       <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
         {" "}
-        {/* Changed to flex-col for small screens */}
-        {/* Profile Icon */}
         <Image
           src="/Profilepic.jpg"
           alt="profile"

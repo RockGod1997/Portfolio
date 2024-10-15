@@ -7,16 +7,13 @@ const Slider = () => {
   return (
     <div className="w-full">
       {" "}
-      {/* Ensures that the Slider inherits parent width */}
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
-        slidesPerView={1} // This can remain as 1 for mobile
+        slidesPerView={1}
         autoplay={{ delay: 5000, disableOnInteraction: true }}
-        className="my-10 " // Ensures Swiper takes full width
+        className="my-10 "
       >
-        {/* Skills Section */}
-
         {/* Education Section */}
         <SwiperSlide>
           <section className="w-full">
