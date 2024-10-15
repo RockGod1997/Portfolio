@@ -51,49 +51,49 @@ body {
 
 @keyframes float-1 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(5px, -5px);
+    transform: translate(5px, -5px) scale(0.9);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
 }
 
 @keyframes float-2 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(-5px, 0px);
+    transform: translate(-5px, 0px) scale(1.2);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
 }
 
 @keyframes float-3 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px) scale(0.8);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
 }
 
 @keyframes float-4 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(5px, 0px);
+    transform: translate(5px, 0px) scale(0.9);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
   }
 }
 
@@ -110,6 +110,14 @@ body {
 }
 
 .animate-float-4 {
+  animation: float-4 4s ease-in-out infinite;
+}
+
+.animate-float-5{
+  animation: float-2 4s ease-in-out infinite;
+}
+
+.animate-float-6{
   animation: float-4 4s ease-in-out infinite;
 }
 
