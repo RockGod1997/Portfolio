@@ -41,7 +41,7 @@ export default function Home() {
                   className="filter invert"
                 />
               </div>
-              <span className="relative z-10">Download Resume</span>
+              <span className="relative z-10">Check out my Resume!</span>
               <div className="absolute inset-0 w-full h-full rounded-full  blur-lg opacity-50 transition-all duration-300 ease-in-out"></div>
             </div>
           </a>

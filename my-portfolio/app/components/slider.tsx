@@ -20,7 +20,7 @@ const Slider = () => {
     {
       title: "Trinity College Dublin",
       subtitle: "MSc in Computer Science, Future Networked System",
-      date: "Sep 2023 - Sep 2024",
+      date: "2023 - 2024",
     },
     {
       title: "Bangalore Institute of Technology",
