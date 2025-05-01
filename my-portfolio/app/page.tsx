@@ -62,26 +62,27 @@ export default function Home() {
               Skills
             </h2>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center font-semibold items-center lg:gap-6">
-  {[
-    "JavaScript",
-    "React Native",
-    "Angular",
-    "CSS",
-    "HTML5",
-    "Python",
-  ].map((skill, index) => (
-    <li
-      key={skill}
-      className={` bg-gray-700 bg-opacity-30 text-white w-[120px] h-[120px] rounded-full border border-gray-300 shadow-lg transition-transform duration-500 relative flex items-center justify-center text-xs sm:text-base animate-float-${index + 1} hover:customHover `}
-      style={{
-        boxShadow: "0 8px 15px rgba(0, 0, 0, 0.3)", // shadow for depth
-      }}
-    >
-      {skill}
-    </li>
-  ))}
-</ul>
-
+              {[
+                "Python",
+                "React Native",
+                "Angular",
+                "Cypress",
+                "Jenkins",
+                "Tailwind",
+              ].map((skill, index) => (
+                <li
+                  key={skill}
+                  className={` bg-gray-700 bg-opacity-30 text-white w-[120px] h-[120px] rounded-full border border-gray-300 shadow-lg transition-transform duration-500 relative flex items-center justify-center text-xs sm:text-base animate-float-${
+                    index + 1
+                  } hover:customHover `}
+                  style={{
+                    boxShadow: "0 8px 15px rgba(0, 0, 0, 0.3)", // shadow for depth
+                  }}
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
           </section>
           <Slider />
         </div>

@@ -8,12 +8,12 @@ export interface Project {
   description?: string;
   technologies?: string;
   video?: string;
-  image?: string; // Made image optional for projects that might only have video
+  image?: string;
   github?: string;
 }
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const { title, description, technologies, video, image, github } = project; // Destructure project
+  const { title, description, technologies, video, image, github } = project;
 
   return (
     <div className="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg max-w-md">
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <em>{technologies}</em>
         </p>
       )}
-      {description && <p className="text-gray-300">{description}</p>} 
+      {description && <p className="text-gray-300">{description}</p>}
       {github && ( // Render link only if github exists
         <div className="mt-4 flex items-center">
           <a
@@ -102,10 +102,11 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       title: "Eco-Compass",
-      video: "https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1",
+      video:
+        "https://www.youtube.com/embed/cGchnnwWjGk?si=tPOD3UzwvEtwJoNt&autoplay=1&mute=1",
       technologies: "React Native, Mapbox, Gluestack UI",
       description: "A sustainable wayfinding application.",
-      github: "https://github.com/ecocompass/wayfinding"
+      github: "https://github.com/ecocompass/wayfinding",
     },
     {
       title: "Covid-19 Dashboard",
@@ -118,14 +119,16 @@ const ProjectsSection = () => {
       title: "Urban Sensor Application",
       image: "/urban.png",
       technologies: "Python Flask, AWS",
-      description: "Collects and displays real-time weather and temperature sensor information.",
+      description:
+        "Collects and displays real-time weather and temperature sensor information.",
       github: "https://github.com/RockGod1997/urban-app",
     },
     {
       title: "Maze Solver",
       image: "/Maze.png",
       technologies: "Python",
-      description: "A maze generator + solver using A*, BFS, DFS, MDP Value and Policy Iterations algorithms.",
+      description:
+        "A maze generator + solver using A*, BFS, DFS, MDP Value and Policy Iterations algorithms.",
       github: "https://github.com/RockGod1997/maze-game",
     },
   ];
