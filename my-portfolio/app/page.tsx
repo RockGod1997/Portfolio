@@ -17,7 +17,7 @@ export default function Home() {
         {/* About Section */}
         <section className="text-center sm:text-left mt-4">
           <p className="text-gray-100  text-base sm:text-lg">
-            Hello! I&apos;m a passionate software engineer with expertise in
+            Hello! I&apos;m a passionate software engineer based out of Ireland with an expertise in
             building responsive, high-performance websites and mobile
             applications. With a focus on user-centered design, I enjoy solving problems using modern
             technologies and turning ideas into
