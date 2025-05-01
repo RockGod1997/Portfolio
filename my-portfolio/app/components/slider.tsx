@@ -33,9 +33,8 @@ const Slider = () => {
     {
       title: "Fidelity Investments",
       subtitle: "Software Engineer",
-      date: "Jan 2025 - Presents",
+      date: "Jan 2025 - Present",
     },
-
     {
       title: "Tata Consultancy Services",
       subtitle: "Systems Engineer",
