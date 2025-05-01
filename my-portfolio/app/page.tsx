@@ -19,8 +19,8 @@ export default function Home() {
           <p className="text-gray-100  text-base sm:text-lg">
             Hello! I&apos;m a passionate software engineer with expertise in
             building responsive, high-performance websites and mobile
-            applications. With a focus on user-centered design and modern
-            technologies, I enjoy solving problems and turning ideas into
+            applications. With a focus on user-centered design, I enjoy solving problems using modern
+            technologies and turning ideas into
             reality.
           </p>
         </section>
