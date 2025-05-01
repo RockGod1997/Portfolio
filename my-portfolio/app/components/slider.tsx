@@ -62,7 +62,7 @@ const Slider = () => {
             <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
               Education
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               {educationData.map((edu, index) => (
                 <Card key={index} {...edu} />
               ))}
@@ -76,7 +76,7 @@ const Slider = () => {
             <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
               Work Experience
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               {workExperienceData.map((work, index) => (
                 <Card key={index} {...work} />
               ))}
