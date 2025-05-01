@@ -8,7 +8,7 @@ const Subtitle: string = "";
 const Date: string = "";
 
 const Card = ({ title = Title, subtitle = Subtitle, date = Date }) => (
-  <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600 hover:shadow-2xl transition-colors duration-300 shadow-md">
+  <div className="bg-gray-800 bg-opacity-30 p-6 rounded-lg border border-gray-600 hover:shadow-2xl transition-colors duration-300 shadow-md text-center flex flex-col items-center justify-center">
     <h3 className="text-gray-100 text-lg">{title}</h3>
     {subtitle && <p className="text-gray-300 mt-2 text-sm">{subtitle}</p>}
     {date && <p className="text-gray-300 mt-2 text-sm">{date}</p>}
