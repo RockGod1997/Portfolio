@@ -1,31 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface TypingEffectProps {
   text: string;
-  speed?: number; // speed is optional
+  speed?: number; // Typing speed in milliseconds
 }
 
 const TypingEffect: React.FC<TypingEffectProps> = ({ text, speed = 150 }) => {
   const [displayedText, setDisplayedText] = useState<string>("");
 
-  useEffect(() => {
-    let index = 0;
+  // Use a ref to track the current index to avoid reinitializing on every render
+  const indexRef = useRef<number>(0);
 
+  useEffect(() => {
     const intervalId = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((prev) => prev + text.charAt(index));
-        index++;
+      if (indexRef.current < text.length) {
+        // Increment the index first, then append the character
+        const nextIndex = indexRef.current;
+        setDisplayedText((prev) => prev + text.charAt(nextIndex));
+        indexRef.current += 1; // Increment the index
       } else {
-        clearInterval(intervalId);
+        clearInterval(intervalId); // Clear the interval after the last character
       }
     }, speed);
 
+    // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, [text, speed]);
 
-  return (
-    <span className="text-gray-100">{displayedText}</span>
-  );
+  return <span className="text-gray-100">{displayedText}</span>;
 };
 
 export default TypingEffect;
