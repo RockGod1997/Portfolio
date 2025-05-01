@@ -31,6 +31,12 @@ const Slider = () => {
 
   const workExperienceData = [
     {
+      title: "Fidelity Investments",
+      subtitle: "Software Engineer",
+      date: "Jan 2025 - Presents",
+    },
+
+    {
       title: "Tata Consultancy Services",
       subtitle: "Systems Engineer",
       date: "Jan 2023 - Aug 2023",
