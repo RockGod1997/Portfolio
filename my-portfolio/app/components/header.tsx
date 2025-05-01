@@ -8,10 +8,10 @@ export default function Header() {
         <Image
           src="/Profilepic.jpg"
           alt="profile"
-          className="rounded-full object-cover w-20 h-20 border-2 border-gray-300"
+          className="rounded-full object-cover w-24 h-24 border-2 border-gray-300"
           style={{ objectPosition: "left" }}
-          width={100}
-          height={100}
+          width={120}
+          height={120}
         />
         <h1 className="text-4xl text-gray-100 font-bold">Samarth Agrawal</h1>
       </div>
