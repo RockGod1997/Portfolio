@@ -8,7 +8,7 @@ const Subtitle: string = "";
 const Date: string = "";
 
 const Card = ({ title = Title, subtitle = Subtitle, date = Date }) => (
-  <div className="bg-gray-800 bg-opacity-30 p-6 rounded-xl border border-gray-600 hover:shadow-2xl transition-colors duration-300 shadow-md text-center flex flex-col items-center justify-center min-h-[240px] w-[360px]">
+  <div className="bg-white bg-opacity-10 p-6 rounded-xl border border-gray-600 hover:shadow-2xl transition-colors duration-300 shadow-lg text-center flex flex-col items-center justify-center min-h-[240px] lg:w-[360px] md:w-[360px] w-[240px]">
     <h3 className="text-gray-100 text-lg">{title}</h3>
     {subtitle && <p className="text-gray-300 mt-2 text-sm">{subtitle}</p>}
     {date && <p className="text-gray-300 mt-2 text-sm">{date}</p>}
@@ -62,7 +62,7 @@ const Slider = () => {
             <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
               Education
             </h2>
-            <div className="gap-6 flex items-center justify-center">
+            <div className="gap-6 flex items-center justify-center  flex-col sm:flex-row">
               {educationData.map((edu, index) => (
                 <Card key={index} {...edu} />
               ))}
@@ -76,7 +76,7 @@ const Slider = () => {
             <h2 className="text-xl sm:text-2xl text-gray-200 text-center font-semibold mb-4">
               Work Experience
             </h2>
-            <div className="gap-6 flex items-center justify-center">
+            <div className="gap-6 flex items-center justify-center flex-col sm:flex-row">
               {workExperienceData.map((work, index) => (
               <Card key={index} {...work} />
               ))}
