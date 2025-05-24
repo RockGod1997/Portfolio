@@ -63,24 +63,30 @@ export default function Home() {
             </h2>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center font-semibold items-center lg:gap-6">
               {[
-                "Python",
-                "React Native",
-                "Angular",
-                "Cypress",
-                "Jenkins",
-                "Tailwind",
+              "Python",
+              "React Native",
+              "Angular",
+              "Cypress",
+              "Jenkins",
+              "Tailwind",
               ].map((skill, index) => (
-                <li
-                  key={skill}
-                  className={` bg-gray-700 bg-opacity-30 text-white w-[120px] h-[120px] rounded-full border border-gray-300 shadow-lg transition-transform duration-500 relative flex items-center justify-center text-xs sm:text-base animate-float-${
-                    index + 1
-                  } hover:customHover `}
-                  style={{
-                    boxShadow: "0 8px 15px rgba(0, 0, 0, 0.3)", // shadow for depth
-                  }}
-                >
-                  {skill}
-                </li>
+              <li
+                key={skill}
+                className={`bg-gray-700 bg-opacity-30 text-white w-[120px] h-[120px] rounded-full border border-gray-300 shadow-lg transition-all duration-500 relative flex items-center justify-center text-xs sm:text-base 
+                hover:scale-110 hover:bg-opacity-50 hover:border-blue-400 hover:text-blue-200 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] ${
+                index === 0 ? 'animate-float-1' :
+                index === 1 ? 'animate-float-2' :
+                index === 2 ? 'animate-float-3' :
+                index === 3 ? 'animate-float-4' :
+                index === 4 ? 'animate-float-5' :
+                'animate-float-6'
+                }`}
+                style={{
+                boxShadow: "0 8px 15px rgba(0, 0, 0, 0.3)",
+                }}
+              >
+                {skill}
+              </li>
               ))}
             </ul>
           </section>
