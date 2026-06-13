@@ -35,6 +35,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               alt={title}
               width={384}
               height={315}
+              sizes="(max-width: 640px) 100vw, 50vw"
               style={{
                 objectFit: "cover",
                 objectPosition: "top",

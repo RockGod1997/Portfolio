@@ -1,18 +1,20 @@
+import Image from "next/image";
 import TypingEffect from "./typingeffect";
 export default function Header() {
   return (
     <header className="flex flex-col items-center gap-2 row-start-1">
       <div className="flex flex-col items-center gap-2">
         {" "}
-        <div
-          className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-300"
-          style={{
-            backgroundImage: "url('/Profilepic.jpg')",
-            backgroundPosition: "37% center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "170%",
-          }}
-        ></div>
+        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-300">
+          <Image
+            src="/Profilepic.jpg"
+            alt="Profile"
+            width={96}
+            height={96}
+            style={{ objectFit: "cover", objectPosition: "37% center" }}
+            priority
+          />
+        </div>
         <h1 className="text-4xl text-gray-100 font-bold text-center">
           Samarth Agrawal
         </h1>

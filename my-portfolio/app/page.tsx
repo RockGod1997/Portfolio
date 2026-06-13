@@ -38,8 +38,7 @@ export default function Home() {
                   alt="download"
                   width={25}
                   height={20}
-                  className="filter invert"
-                />
+                  className="filter invert"                  priority                />
               </div>
               <span className="relative z-10">Check out my Resume!</span>
               <div className="absolute inset-0 w-full h-full rounded-full  blur-lg opacity-50 transition-all duration-300 ease-in-out"></div>
